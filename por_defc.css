@@ -1,0 +1,41 @@
+body{
+    background: #659999;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f4791f, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+h1{
+    text-align: center; background-color: #cccccc;
+}
+p{
+    text-align: center;
+}
+#mis{
+    font-size: 25px;
+}
+#fras{
+    color: red;
+    background: -webkit-linear-gradient(to right, #659999, #f4791f);
+    background: linear-gradient(to right, #659999, #f4791f);
+}
+#name{
+    color:blueviolet;
+}
+
+section{
+    display: flex;
+    width:100%;
+    height: 530px;
+}
+section img{
+    width: 1px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+section img:hover{
+    cursor: crosshair;
+    width: 350px;
+    opacity: 1;
+    filter: contrast(120%);
+}
