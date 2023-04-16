@@ -1,14 +1,38 @@
-<canvas width="600" height="400"></canvas>
-<style>
-    body {
-        background: #659999;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #f4791f, #659999);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #f4791f, #659999);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    }
-</style>
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio3</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>PAINT?</h1> 
+            <p>Un intento de paint, con el clik derecho se cambia el tamaño del circulo para colorear, <br>click derecho sobre un panel de color para poder cambiar el color<br>dejar precionado clik derecho para colorear</p>
+        </header>
+      
+        <section>
+            <div>
+                <h2>Mis proyectos:</h2>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="canva.html">ejercicio para entender el uso de canvas</a></li>
+                    <li><a href="clase5.html">ejercicio para el uso de funciones en javascrip</a></li>
+                    <li><a href="Ejercicio3.html">poner en practica lo aprendido</a></li>
+                    <li><a href="Radiant.html">intento de WEB de Radiant</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <canvas width="600" height="400"></canvas>
+        </section>
+
+    </body>
+</html>
 <script>
     var pantalla = document.querySelector('canvas');
     var pincel = pantalla.getContext('2d');
