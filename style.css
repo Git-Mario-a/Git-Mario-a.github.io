@@ -7,9 +7,6 @@
     width: 940px;
     margin: 0 auto;  
 }
-.fondo{
-    background: linear-gradient(#054045, #012123);
-}
 .titulo-principal{
     color: #b531da;
     text-shadow: 0px 0px 20px #da31a5;
@@ -36,7 +33,6 @@
 }
 .diferenciales{
     padding: 3em 0;
-    background: #012123;
 }
 .contenido-diferenciales{
     width: 640px;
@@ -69,8 +65,12 @@
 
 /*Aquí termina el CSS para home*/
 
+
 /*css de cosas generales*/
 
+.fondo{
+    background: linear-gradient(#054045, #012123);
+}
 header {
     background-color: #054045;
     padding: 20px 0;
@@ -87,18 +87,15 @@ body{
 .caja h1{
     font-size: 50px;
 }
-
 nav{
     position: absolute;
     top:20px;
     right: 0;
 }
-
 nav li{
     display: inline;
     margin: 0 0 0 10px;
 }
-
 nav a{
     text-transform: uppercase;
     color: rgb(0, 21, 255);
@@ -106,7 +103,6 @@ nav a{
     font-size: 20px;
     text-decoration: none;
 }
-
 nav a:hover{
     color: #c719c7;
     text-decoration: underline;

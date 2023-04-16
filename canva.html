@@ -1,40 +1,58 @@
 <!DOCTYPE html>
-<html lang="es">
 
-<html>
+<html lang="es">
+    
     <head>
         <meta charset="UTF-8">
-        <title>Canvas</title>
+        <meta name="viewport" content="width=device-width"> 
+        <title>CANVA</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     </head>
+
     <body>
         <header>
-            <h1>Ejercicios de como funcionan los canvas convinados con javascrip</h1>
-        </header>
-        <section>
-            <div>
-                <h2>Mis proyectos:</h2>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="canva.html">ejercicio para entender el uso de canvas</a></li>
-                    <li><a href="clase5.html">ejercicio para el uso de funciones en javascrip</a></li>
-                    <li><a href="Ejercicio3.html">poner en practica lo aprendido</a></li>
-                    <li><a href="Radiant.html">intento de WEB de Radiant</a></li>
-                </ul>
+            <div class="caja">
+                <h1>MIS PROYECTOS</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="canva.html">canvas</a></li>
+                        <li><a href="clase5.html">diana</a></li>
+                        <li><a href="Ejercicio3.html">paint</a></li>
+                        <li><a href="Radiant.html">WEB</a></li>
+                    </ul>
+                </nav>
             </div>
-        </section>
-        <section>
+        </header>
+
+        <main class="fondo">
+            <div>
+                <section class="principal">
+                    <h2 class="titulo-principal">Sobre canvas</h2>
+                    <p> Resultado de lo que aprendi Sobre <strong>CANVAS</strong> es un ejemplo de cosas que fui viendo al iniciar a aprender HTML, JAVASCRIP y CSS</p>
+                </section>
+            </div>
+            <section>
                 <canvas width="600" height="400"></canvas><!--Canva para la bandera de Mexico-->
-                <canvas width="1000" height="700"></canvas><!--Canva para la cara de minecraft-->
+                <canvas width="600" height="400"></canvas><!--Canva para la cara de minecraft-->
                 <canvas width="600" height="400"></canvas><!--Canva para la escuadra-->
-        </section>
+            </section>
+             
+        </main>
+        
+        <footer>
+            <p class="pie-pag">aun por rellenar</p>
+        </footer>
+        
     </body>
 </html>
 
+
 <script>
 function banderamexico(){
-    var pantalla = document.querySelector("canvas");
+    var pantalla = document.querySelectorAll("canvas")[0];
     var pincel = pantalla.getContext("2d");
 
     pincel.fillStyle = "white";
@@ -115,19 +133,19 @@ function cabezamine(){
 
     // cabeza
     pincel.fillStyle = "darkgreen";
-    pincel.fillRect(200, 50, 350, 300);
+    pincel.fillRect(0, 50, 350, 300);
 
     // ojos
     pincel.fillStyle = "black";
-    pincel.fillRect(250, 110, 90, 90);
-    pincel.fillRect(410, 110, 90, 90);
+    pincel.fillRect(50, 110, 90, 90);
+    pincel.fillRect(210, 110, 90, 90);
 
     // nariz
-    pincel.fillRect(340, 200, 70, 100);
+    pincel.fillRect(140, 200, 70, 100);
 
     // boca
-    pincel.fillRect(300, 240, 40, 110);
-    pincel.fillRect(410, 240, 40, 110);
+    pincel.fillRect(100, 240, 40, 110);
+    pincel.fillRect(210, 240, 40, 110);
 }
 function escuadra(){
     var pantalla = document.querySelectorAll("canvas")[2];
@@ -148,6 +166,7 @@ function escuadra(){
     pincel.fill();
 }
 banderamexico();
+escuadra();
 cabezamine();
-escuadra(); 
+
 </script>
