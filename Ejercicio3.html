@@ -1,38 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
 
+<html lang="es">
+    
     <head>
         <meta charset="UTF-8">
-        <title>Ejercicio3</title>
+        <meta name="viewport" content="width=device-width"> 
+        <title>PAINT?</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <body>
-
         <header>
-            <h1>PAINT?</h1> 
-            <p>Un intento de paint, con el clik derecho se cambia el tamaño del circulo para colorear, <br>click derecho sobre un panel de color para poder cambiar el color<br>dejar precionado clik derecho para colorear</p>
-        </header>
-      
-        <section>
-            <div>
-                <h2>Mis proyectos:</h2>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="canva.html">ejercicio para entender el uso de canvas</a></li>
-                    <li><a href="clase5.html">ejercicio para el uso de funciones en javascrip</a></li>
-                    <li><a href="Ejercicio3.html">poner en practica lo aprendido</a></li>
-                    <li><a href="Radiant.html">intento de WEB de Radiant</a></li>
-                </ul>
+            <div class="caja">
+                <h1>MIS PROYECTOS</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="canva.html">canvas</a></li>
+                        <li><a href="clase5.html">diana</a></li>
+                        <li><a href="Ejercicio3.html">paint</a></li>
+                        <li><a href="Radiant.html">WEB</a></li>
+                    </ul>
+                </nav>
             </div>
-        </section>
-        <section>
-            <canvas width="600" height="400"></canvas>
-        </section>
+        </header>
 
+        <main class="fondo">
+            <div>
+                <section class="principal">
+                    <h2 class="titulo-principal">PAINT?</h2>
+                    <p> Resultado de lo que aprendi Sobre <strong>CANVAS y Funciones</strong> junto lo que aprendi sobre los convas y las funciones de JAVASCRIPT hago este reto de hacer una especie de PAINT con 4 colores</p>
+                    <p>Funcionamiento: Dejar precionado cick izquierdo en el espacio en blanco para pintar, dar click izquierdo en alguna de las paletas de colores para cambiar el color, con el click izquierdo puedes alternar el tamaño, hay 3 tamaños, empiezas con el chico, se puede camabiar a mediano y luego a grande, si vuelves a precionar el click derecho se reinicia</p>
+                </section>
+            </div>
+            <section class="principal">
+                <canvas width="900" height="500"></canvas>
+            </section>
+             
+        </main>
+        
+        <footer>
+            <p class="pie-pag">aun por rellenar</p>
+        </footer>
+        
     </body>
 </html>
+
+
 <script>
     var pantalla = document.querySelector('canvas');
     var pincel = pantalla.getContext('2d');
@@ -48,7 +64,7 @@
     var tamanoact = 0;
     function pizzarra(){
         pincel.fillStyle = 'white';
-        pincel.fillRect(0, 0, 600, 400);
+        pincel.fillRect(0, 0, 900, 500);
     }
     function dibujarCirculo(x,y,tam,colora){
         if(puedoDibujar){

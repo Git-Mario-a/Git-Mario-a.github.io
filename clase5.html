@@ -1,43 +1,58 @@
-<!-- cuadrado.html -->
 <!DOCTYPE html>
-<html lang="es">
 
-<html>
+<html lang="es">
+    
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"> 
         <title>DIANA</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     </head>
+
     <body>
         <header>
-            <h1>Ejercicio de una diana</h1>
-        </header>
-        <section>
-            <div>
-                <h2>Mis proyectos:</h2>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="canva.html">ejercicio para entender el uso de canvas</a></li>
-                    <li><a href="clase5.html">ejercicio para el uso de funciones en javascrip</a></li>
-                    <li><a href="Ejercicio3.html">poner en practica lo aprendido</a></li>
-                    <li><a href="Radiant.html">intento de WEB de Radiant</a></li>
-                </ul>
+            <div class="caja">
+                <h1>MIS PROYECTOS</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="canva.html">canvas</a></li>
+                        <li><a href="clase5.html">diana</a></li>
+                        <li><a href="Ejercicio3.html">paint</a></li>
+                        <li><a href="Radiant.html">WEB</a></li>
+                    </ul>
+                </nav>
             </div>
-        </section>
-        <section>
-            <canvas width="600" height="400"></canvas>
-        </section>
+        </header>
+
+        <main class="fondo">
+            <div>
+                <section class="principal">
+                    <h2 class="titulo-principal">DIANA</h2>
+                    <p> Resultado de lo que aprendi Sobre <strong>Funciones</strong> un ejemplo de funciones aprendidas de JAVASCRIP donde el proposito es lograr hacer una DIANA-Tiro al Blanco y usar lo aprendido en canvas para el apartado grafico</p>
+                    <p>El proposito es hacer click izquierdo e el centro de la diana</p>
+                </section>
+            </div>
+            <section class="principal">
+                <canvas width="900" height="500"></canvas>
+            </section>
+             
+        </main>
+        
+        <footer>
+            <p class="pie-pag">aun por rellenar</p>
+        </footer>
+        
     </body>
 </html>
-
-
 
 <script>
     var pantalla = document.querySelector("canvas");
     var pincel = pantalla.getContext("2d");    
     pincel.fillStyle = "white";
-    pincel.fillRect(0,0,600,400);
+    pincel.fillRect(0,0,900,500);
     var x=0;
     var radio =10;
     var xrand;
@@ -49,13 +64,13 @@
 		pincel.fill();
     }
     function limpiar(){
-        pincel.clearRect(0,0,600,400);
+        pincel.clearRect(0,0,900,500);
     }
     
     function impcir(){
         limpiar();
-        xrand = rand(600);
-        yrand = rand(400);
+        xrand = rand(900);
+        yrand = rand(500);
         objetivo(xrand,yrand);
         x++;
     }
@@ -75,6 +90,6 @@
             alert("tiro certero");
         }
     }
-    setInterval(impcir,1000);
+    setInterval(impcir,900);
     pantalla.onclick = disparar;
 </script> 

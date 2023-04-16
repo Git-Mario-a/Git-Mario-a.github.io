@@ -72,7 +72,7 @@
     background: linear-gradient(#054045, #012123);
 }
 header {
-    background-color: #054045;
+    background-color: #057d88;
     padding: 20px 0;
     color: rgb(77, 255, 0);
 }
@@ -118,6 +118,34 @@ footer{
     margin:20px;
 }
 /*aqui acaba el css general*/
+/*css para RADIANT*/
+
+#name{
+    color:blueviolet;
+}
+.apartado{
+    color: #ecf315;
+    text-shadow: 0px 0px 50px #31a7da;
+}
+.imagenes{
+    display: flex;
+    width:100%;
+    height: 530px;
+}
+.imagenes img{
+    width: 1px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.imagenes img:hover{
+    cursor: crosshair;
+    width: 350px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+/*CSS termina para radiant*/
 /*css para adaptar a a celulares*/
 @media screen and (max-width:480px){
     h1{
