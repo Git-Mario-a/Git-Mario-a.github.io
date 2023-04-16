@@ -154,7 +154,7 @@ footer{
     nav{
         position: static;
     }
-    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video {
+    .caja, .principal, .contenido-diferenciales{
         width: auto;
     }
     .lista-diferenciales, .imagen-diferenciales{
