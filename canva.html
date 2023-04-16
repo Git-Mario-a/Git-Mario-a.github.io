@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Ejercicios de como funcionan los canvas convinados con javascrip</h1>
+        </header>
+        <div>
+                <canvas width="600" height="400"></canvas><!--Canva para la bandera de Mexico-->
+                <canvas width="1000" height="700"></canvas><!--Canva para la cara de minecraft-->
+                <canvas width="600" height="400"></canvas><!--Canva para la escuadra-->
+        </div>
+    </body>
+</html>
+
+<script>
+function banderamexico(){
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "white";
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = "green";
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = "darkgreen";
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = "brown";
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * Math.PI);
+    pincel.fill();
+
+    // Agregamos el escudo nacional
+    pincel.fillStyle = "green";
+    pincel.beginPath();
+    pincel.arc(300, 200, 80, 0, 2 * Math.PI);
+    pincel.fill();
+
+    pincel.fillStyle = "brown";
+    pincel.beginPath();
+    pincel.moveTo(290, 200);
+    pincel.lineTo(270, 170);
+    pincel.lineTo(300, 150);
+    pincel.lineTo(330, 170);
+    pincel.lineTo(310, 200);
+    pincel.lineTo(290, 200);
+    pincel.fill();
+
+    pincel.strokeStyle = "white";
+    pincel.lineWidth = 8;
+    pincel.beginPath();
+    pincel.moveTo(290, 200);
+    pincel.lineTo(310, 200);
+    pincel.stroke();
+
+    pincel.strokeStyle = "brown";
+    pincel.lineWidth = 4;
+    pincel.beginPath();
+    pincel.moveTo(280, 220);
+    pincel.lineTo(320, 220);
+    pincel.stroke();
+    pincel.strokeStyle = "brown";
+    pincel.lineWidth = 4;
+    pincel.beginPath();
+    pincel.moveTo(290, 230);
+    pincel.lineTo(310, 230);
+    pincel.stroke();
+
+    pincel.fillStyle = "white";
+    pincel.beginPath();
+    pincel.arc(300, 200, 30, 0, 2 * Math.PI);
+    pincel.fill();
+
+    pincel.fillStyle = "green";
+    pincel.beginPath();
+    pincel.arc(300, 200, 20, 0, 2 * Math.PI);
+    pincel.fill();
+
+    pincel.fillStyle = "red";
+    pincel.beginPath();
+    pincel.arc(300, 200, 10, 0, 2 * Math.PI);
+    pincel.fill();
+}
+function cabezamine(){
+    var pantalla = document.querySelectorAll("canvas")[1];
+    var pincel = pantalla.getContext("2d");
+
+    // cabeza
+    pincel.fillStyle = "darkgreen";
+    pincel.fillRect(200, 50, 350, 300);
+
+    // ojos
+    pincel.fillStyle = "black";
+    pincel.fillRect(250, 110, 90, 90);
+    pincel.fillRect(410, 110, 90, 90);
+
+    // nariz
+    pincel.fillRect(340, 200, 70, 100);
+
+    // boca
+    pincel.fillRect(300, 240, 40, 110);
+    pincel.fillRect(410, 240, 40, 110);
+}
+function escuadra(){
+    var pantalla = document.querySelectorAll("canvas")[2];
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "black";
+    pincel.beginPath();
+    pincel.moveTo(50, 50);
+    pincel.lineTo(50, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = "white";
+    pincel.beginPath();
+    pincel.moveTo(100, 175);
+    pincel.lineTo(100, 350);
+    pincel.lineTo(275, 350);
+    pincel.fill();
+}
+banderamexico();
+cabezamine();
+escuadra(); 
+</script>
