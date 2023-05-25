@@ -87,11 +87,7 @@ body{
 .caja h1{
     font-size: 50px;
 }
-nav{
-    position: absolute;
-    top:20px;
-    right: 0;
-}
+
 nav li{
     display: inline;
     margin: 0 0 0 10px;
